@@ -27,6 +27,7 @@ export class EthereumPickleBalanceFetcher implements BalanceFetcher {
   ) {}
 
   private async getJarBalances(address: string) {
+    console.log('getJarBalances', address);
     return await this.tokenBalanceHelper.getTokenBalances({
       network: Network.ETHEREUM_MAINNET,
       appId: PICKLE_DEFINITION.id,
